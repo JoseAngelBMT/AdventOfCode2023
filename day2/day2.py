@@ -45,6 +45,5 @@ def process_line_minimun_set(line: str) -> int:
 with open('day2.txt') as f:
     lines = [[line.replace('\n','')] for line in f]
 
-sum_map = map(process_line, lines)
-sum_ids = reduce(lambda x, acc: acc+x, sum_map, 0)
-print(sum_ids)
+sum_map = list(map(process_line, lines))
+print(sum(sum_map))
